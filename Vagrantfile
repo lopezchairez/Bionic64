@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vm.hostname = "bionic64"
   config.vm.network "private_network", ip: "192.168.30.10"
+  config.disksize.size = "40GB"
 
   config.vm.synced_folder "./code", "/var/www",
     id: "idx1",
