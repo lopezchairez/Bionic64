@@ -5,10 +5,6 @@ cat > $HOME/.bash_aliases << EOF
 alias ..="cd .."
 alias ...="cd ../.."
 
-# ls shortcuts
-alias ll="ls -l"
-alias lla="ls -la"
-
 # phinx
 alias px:create="php ./vendor/bin/phinx create"
 alias px:migrate="php ./vendor/bin/phinx migrate"
