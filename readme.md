@@ -63,7 +63,6 @@ Connection Method: Standard TCP/IP over SSH
 ```
 SSH Hostname: 192.168.30.10  
 SSH Username: vagrant  
-SSH Password: vagrant  
 SSH Key File: ~/Bionic64/.vagrant/machines/default/virtualbox/private_key  
 ```
 
