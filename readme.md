@@ -23,6 +23,7 @@ You may need to enable hardware virtualization (VT-x). It can usually be enabled
 - nvm 0.34.0
 - node v10.16.0
 - npm 6.9.0
+- Zend Framework 1.11.1
 
 ## Installation
 
@@ -72,3 +73,15 @@ MySQL Port: 3306
 MySQL User: root  
 MySQL Pass: root  
 ```
+
+## Zend Framework
+The installed version is 1.11.1.
+
+To create a zend app run the following command:
+```bash
+zf create project myApp
+```
+
+To list all the commands just hit ```zf```
+
+You can reference the [manual](https://framework.zend.com/manual/1.11/en/reference.html) in the Zend Framework website.
