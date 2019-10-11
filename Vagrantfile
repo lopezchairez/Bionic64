@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--uartmode1", "file", ubuntu_log_file]
-    vb.memory = 4096
+    vb.memory = 2048
     vb.cpus = 2
   end
 
