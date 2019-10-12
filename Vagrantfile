@@ -35,6 +35,10 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
   end
 
+  config.vm.provision "shell", inline: "/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024", run: "always"
+  config.vm.provision "shell", inline: "/sbin/mkswap /var/swap.1", run: "always"
+  config.vm.provision "shell", inline: "/sbin/swapon /var/swap.1", run: "always"
+
   config.vm.provision "bootstrap", type: "shell" do |s|
     s.path = scripts_path + '/bootstrap.sh'
   end
