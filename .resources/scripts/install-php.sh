@@ -33,4 +33,4 @@ if [ ! -f "$COMPOSER_FILE" ]; then
 	curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 fi
 
-apt-get install -y php-memcached php-xdebug
+apt-get install -y php-memcached

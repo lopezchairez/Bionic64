@@ -9,3 +9,4 @@ apt-get install -y build-essential software-properties-common
 apt-get install -y pv vim curl wget tree unzip git-core
 
 apt-get install -y imagemagick memcached beanstalkd supervisor sqlite3
+apt-get install -y libpng-dev
