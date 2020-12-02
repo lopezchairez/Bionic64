@@ -28,9 +28,16 @@ do
 	sed -i "s/short_open_tag = .*/short_open_tag = On/" "/etc/php/${VERSION}/apache2/php.ini"
 done
 
+apt-get install -y php-memcached
+
+update-alternatives --set php /usr/bin/php5.6
+
+a2dismod php5.6 php7.0 php7.1 php7.2 php7.3
+a2enmod php5.6
+service apache2 restart
+
 COMPOSER_FILE=/usr/local/bin/composer
 if [ ! -f "$COMPOSER_FILE" ]; then
 	curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 fi
 
-apt-get install -y php-memcached
