@@ -3,7 +3,7 @@
 add-apt-repository -y ppa:ondrej/php
 apt-get update
 
-VERSIONS=("5.6" "7.0" "7.1" "7.2" "7.3")
+VERSIONS=("5.6" "7.4")
 
 for VERSION in "${VERSIONS[@]}"
 do
@@ -29,10 +29,9 @@ do
 done
 
 apt-get install -y php-memcached
-
 update-alternatives --set php /usr/bin/php5.6
 
-a2dismod php5.6 php7.0 php7.1 php7.2 php7.3
+a2dismod php5.6 php7.4
 a2enmod php5.6
 service apache2 restart
 

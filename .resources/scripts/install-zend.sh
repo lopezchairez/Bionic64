@@ -13,7 +13,7 @@ if [ ! -d "$ZEND_PATH" ]; then
 	ln -s /usr/share/php/zend-framework-1.11.11/bin/zf.sh /usr/bin/zf
 fi
 
-VERSIONS=("5.6" "7.0" "7.1" "7.2" "7.3")
+VERSIONS=("5.6" "7.4")
 
 for VERSION in "${VERSIONS[@]}"
 do
