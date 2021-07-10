@@ -23,21 +23,11 @@ Vagrant.configure("2") do |config|
     owner: 'vagrant', 
     group: 'www-data'
 
-  config.vm.synced_folder "./task", "/var/task",
-    id: "idx3",
-    mount_options: ["dmode=777", "fmode=777"],
-    owner: 'vagrant', 
-    group: 'www-data'
-
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--uartmode1", "file", ubuntu_log_file]
-    vb.memory = 4096
+    vb.memory = 2048
     vb.cpus = 2
   end
-
-  config.vm.provision "shell", inline: "/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024", run: "always"
-  config.vm.provision "shell", inline: "/sbin/mkswap /var/swap.1", run: "always"
-  config.vm.provision "shell", inline: "/sbin/swapon /var/swap.1", run: "always"
 
   config.vm.provision "bootstrap", type: "shell" do |s|
     s.path = scripts_path + '/bootstrap.sh'

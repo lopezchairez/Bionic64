@@ -3,7 +3,7 @@
 add-apt-repository -y ppa:ondrej/php
 apt-get update
 
-VERSIONS=("5.6" "7.4")
+VERSIONS=("5.6")
 
 for VERSION in "${VERSIONS[@]}"
 do
@@ -16,6 +16,7 @@ do
 		"php${VERSION}-mysql" \
 		"php${VERSION}-sqlite3" \
 		"php${VERSION}-xml" \
+		"php${VERSION}-mcrypt" \
 		"php${VERSION}-zip"
 
 	sed -i "s/error_reporting = .*/error_reporting = E_ALL \\& ~E_DEPRECATED/" "/etc/php/${VERSION}/cli/php.ini"

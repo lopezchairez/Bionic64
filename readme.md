@@ -12,17 +12,11 @@ You may need to enable hardware virtualization (VT-x). It can usually be enabled
 
 ## Features
 - Ubuntu Bionic 18.04.2 LTS
-- Apache 2.4.39
-- PHP 5.6, 7.0, 7.1, 7.2 and 7.3
-- MySQL 5.6.44
-- python 2.7.15
-- python 3.5.7
-- python 3.6.7
-- python 3.7.3
-- pip 19.1.1
-- nvm 0.34.0
-- node v10.16.0
-- npm 6.9.0
+- Apache 2.4
+- PHP 5.6
+- MySQL 5.7
+- python 3.6 + pip
+- nvm + node + npm
 - Zend Framework 1.11.1
 
 ## Installation
@@ -85,23 +79,3 @@ zf create project myApp
 To list all the commands just hit ```zf```
 
 You can reference the [manual](https://framework.zend.com/manual/1.11/en/reference.html) in the Zend Framework website.
-
-## PHP versions
-Available versions: 5.6, 7.0, 7.1, 7.2, and 7.3.
-
-Get the current PHP version
-```bash
-php -v
-```
-
-With the following aliases you can change the PHP version for Apache and the CLI.
-- php56
-- php70
-- php71
-- php72
-- php74
-
-Example: Set the default PHP version to 5.6
-```bash
-php56
-```

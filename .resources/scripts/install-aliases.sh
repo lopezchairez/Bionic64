@@ -35,21 +35,6 @@ alias puf="vendor/bin/phpunit --filter"
 function dbimport() { 
   pv \$1 --progress --eta | zcat | mysql -uroot -proot \$2
 }
-
-# php versions
-function php56() {
-  sudo update-alternatives --set php /usr/bin/php5.6
-  sudo a2dismod php5.6 php7.4
-  sudo a2enmod php5.6
-  sudo service apache2 restart
-}
-
-function php74() {
-  sudo update-alternatives --set php /usr/bin/php7.4
-  sudo a2dismod php5.6 php7.4
-  sudo a2enmod php7.4
-  sudo service apache2 restart
-}
 EOF
 
 chown vagrant:vagrant $HOME/.bash_aliases
