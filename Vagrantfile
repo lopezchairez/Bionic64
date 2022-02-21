@@ -42,16 +42,16 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "install-mysql", type: "shell" do |s|
-    s.path = scripts_path + '/install-mysql.sh'
+    s.path = scripts_path + '/install-mysql5.sh'
   end
 
-  config.vm.provision "install-php", type: "shell" do |s|
-    s.path = scripts_path + '/install-php.sh'
+  config.vm.provision "install-php7", type: "shell" do |s|
+    s.path = scripts_path + '/install-php7.sh'
   end
 
-  config.vm.provision "install-zend", type: "shell" do |s|
-    s.path = scripts_path + '/install-zend.sh'
-  end
+  # config.vm.provision "install-zend5", type: "shell" do |s|
+  #   s.path = scripts_path + '/install-zend5.sh'
+  # end
 
   config.vm.provision "install-python", type: "shell" do |s|
     s.path = scripts_path + '/install-python.sh'
